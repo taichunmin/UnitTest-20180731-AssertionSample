@@ -2,9 +2,11 @@
 
 namespace AssertionSample;
 
+use DateTime;
+
 class CustomerRepo
 {
-    public function get() : Order
+    public function get() : Customer
     {
         $customer = new Customer;
 
@@ -30,7 +32,7 @@ class CustomerRepo
             $customer->birthday = $data[2];
 
             return $customer;
-        });
+        }, $customers);
     }
 
     public function getComposedCustomer() : Customer
