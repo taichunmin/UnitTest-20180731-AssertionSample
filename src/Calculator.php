@@ -4,7 +4,7 @@ namespace AssertionSample;
 
 class Calculator
 {
-    public function divide($first, $second)
+    public function divide(float $first, float $second) : float
     {
         if ($second == 0) {
             throw new DivisionZeroException;
